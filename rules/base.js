@@ -16,7 +16,39 @@ module.exports = {
     onlyDeclarations: true,
     properties: true
   }],
-  'import/order': 'off',
+  'import/order': [
+    'error',
+    {
+      groups: [
+        'builtin',
+        'external',
+        'internal',
+        'parent',
+        'sibling',
+        'index',
+      ],
+      'newlines-between': 'always',
+      alphabetize: { order: 'asc', caseInsensitive: true },
+      pathGroups: [
+        {
+          pattern: 'react',
+          group: 'external',
+          position: 'before',
+        },
+        {
+          pattern: "@angular/**",
+          group: "external",
+          position: 'before'
+        },
+        {
+          pattern: "vue",
+          group: "external",
+          position: 'before'
+        }
+      ],
+      pathGroupsExcludedImportTypes: ['react', 'angular', 'vue']
+    }
+  ],//'off',
   'import/prefer-default-export': 'off',
   indent: ['error', 2, {
     SwitchCase: 1
@@ -62,7 +94,7 @@ module.exports = {
   'quotes': ['error', 'single'],
   semi: 'error',
   'semi-spacing': 'error',
-  //'simple-import-sort/sort': 'error',
+  'simple-import-sort/sort': 'error',
   'sort-destructure-keys/sort-destructure-keys': ['error', {
     caseSensitive: true
   }],
