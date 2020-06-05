@@ -1,15 +1,17 @@
 const baseRules = require('./rules/base');
-const angularRules = require('./rules/angular');
+const vueRules = require('./rules/vue');
 
-const parser = '@typescript-eslint/parser';
+const parser = 'vue-eslint-parser';
 
 const configs = [
-	'airbnb-base',
+  'plugin:vue/essential',
+  'plugin:vue/recommended',
+  'plugin:vue/strongly-recommended',
 	'plugin:@typescript-eslint/recommended',
 	'plugin:import/typescript',
 	// Disable rules which might conflict with Prettier
 	'prettier',
-	'prettier/@typescript-eslint',
+  'prettier/@typescript-eslint'
 ];
 
 const plugins = [
@@ -20,7 +22,7 @@ const plugins = [
   'sort-destructure-keys',
   'sort-imports-es6',
   'switch-case',
-  '@typescript-eslint',
+  '@typescript-eslint'
 ];
 
 module.exports = {
@@ -29,11 +31,16 @@ module.exports = {
     'es6': true,
     'node': true
   },
-	parser,
+  parser,
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
 	extends: configs,
 	plugins,
 	rules: {
 		...baseRules,
-		...angularRules,
+		...vueRules,
 	},
 };

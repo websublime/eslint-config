@@ -15,7 +15,7 @@ module.exports = {
   '@typescript-eslint/no-non-null-assertion': 'error',
   '@typescript-eslint/prefer-function-type': 'error',
   '@typescript-eslint/unified-signatures': 'error',
-  'arrow-body-style': 'error',
+  'arrow-body-style': ['error', 'as-needed'],
   camelcase: 'off',
   'constructor-super': 'error',
   'dot-notation': 'off',
@@ -24,7 +24,7 @@ module.exports = {
   'id-blacklist': 'off',
   'id-match': 'off',
   'import/no-deprecated': 'warn',
-  'import/order': 'error',
+  //'import/order': 'error',
   'no-bitwise': 'error',
   'no-caller': 'error',
   'no-console': [
@@ -74,7 +74,7 @@ module.exports = {
   'no-var': 'error',
   'prefer-const': 'error',
   radix: 'error',
-  '@typescript-eslint/tslint/config': [
+  /* '@typescript-eslint/tslint/config': [
     'error',
     {
       rules: {
@@ -107,5 +107,5 @@ module.exports = {
         'use-pipe-transform-interface': true
       }
     }
-  ]
+  ] */
 };

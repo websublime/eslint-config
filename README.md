@@ -10,6 +10,8 @@ This repository contains ESLint configurations for the following setups:
 - JavaScript with React
 - TypeScript
 - TypeScript with React
+- Angular
+- Vue
 
 They are designed to be used together with [Prettier](https://github.com/prettier/prettier).
 
@@ -57,6 +59,30 @@ They are designed to be used together with [Prettier](https://github.com/prettie
        && npx install-peerdeps --dev eslint-config-airbnb
      ```
 
+   - Angular:
+
+     ```sh
+     yarn add --dev @websublime/eslint-config \
+       eslint-config-prettier \
+       @typescript-eslint/eslint-plugin \
+       @typescript-eslint/parser \
+       eslint-plugin-simple-import-sort \
+       && npx install-peerdeps --dev eslint-config-airbnb
+     ```
+
+   - Vuejs:
+
+     ```sh
+     yarn add --dev @websublime/eslint-config \
+       eslint-config-prettier \
+       eslint-plugin-vue \
+       @typescript-eslint/eslint-plugin \
+       @typescript-eslint/parser \
+       vue-eslint-parser \
+       eslint-plugin-simple-import-sort \
+       && npx install-peerdeps --dev eslint-config-airbnb
+     ```
+
 2. **Create the following entry in your `package.json` file:**
 
    - JavaScript:
@@ -99,6 +125,28 @@ They are designed to be used together with [Prettier](https://github.com/prettie
        "eslintConfig": {
          "root": true,
          "extends": ["@websublime/eslint-config/typescript-react"]
+       }
+     }
+     ```
+
+   - Angular:
+
+     ```json
+     {
+       "eslintConfig": {
+         "root": true,
+         "extends": ["@websublime/eslint-config/angular"]
+       }
+     }
+     ```
+
+   - Vuejs:
+
+     ```json
+     {
+       "eslintConfig": {
+         "root": true,
+         "extends": ["@websublime/eslint-config/vue"]
        }
      }
      ```
