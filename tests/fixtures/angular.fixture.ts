@@ -1,3 +1,8 @@
+import { Service } from './my.service';
+import { Provider } from './my.provider';
+
+Service();
+
 class invalidClassName {}
 
 type T = { x: number };

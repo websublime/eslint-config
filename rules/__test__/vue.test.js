@@ -1,9 +1,9 @@
-const path = require('path');
-const { createEngine, cleanReport } = require('../../tests/utils');
+const path = require("path");
+const { createEngine, cleanReport } = require("../../tests/utils");
 
-const configFile = path.resolve(__dirname, '../../vue.js');
+const configFile = path.resolve(__dirname, "../../vue.js");
 
-describe('Validate Vue ESLint config.', () => {
+describe("Validate Vue ESLint config.", () => {
   /**
    * @typedef { import("eslint").CLIEngine } CLIEngine
    * @type {CLIEngine}
@@ -12,16 +12,16 @@ describe('Validate Vue ESLint config.', () => {
 
   beforeEach(() => {
     const parserOptions = {
-      "parser": "babel-eslint",
-      "ecmaVersion": 2017,
-      "sourceType": "module"
+      parser: "babel-eslint",
+      ecmaVersion: 2020,
+      sourceType: "module",
     };
 
     engine = createEngine({ configFile, parserOptions });
   });
 
-  it('> Rules: Vuejs', () => {
+  it("> Rules: Vuejs", () => {
     const report = engine.executeOnFiles(["vue.fixture.vue"]);
     expect(cleanReport(report)).toMatchSnapshot();
-  })
+  });
 });
