@@ -2,12 +2,12 @@
 
 exports[`Validate Base ESLint config. > Rules: Base 1`] = `
 Object {
-  "errorCount": 80,
+  "errorCount": 78,
   "fixableErrorCount": 30,
   "fixableWarningCount": 0,
   "results": Array [
     Object {
-      "errorCount": 80,
+      "errorCount": 78,
       "filePath": "tests/fixtures/base.fixture.jsx",
       "fixableErrorCount": 30,
       "fixableWarningCount": 0,
@@ -83,6 +83,8 @@ Object {
         },
         Object {
           "column": 17,
+          "endColumn": 2,
+          "endLine": 7,
           "fix": Object {
             "range": Array [
               131,
@@ -354,17 +356,6 @@ Object {
           "messageId": "wrongQuotes",
           "nodeType": "Literal",
           "ruleId": "quotes",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 12,
-          "endLine": 30,
-          "line": 30,
-          "message": "Expected an assignment or function call and instead saw an expression.",
-          "messageId": "unusedExpression",
-          "nodeType": "ExpressionStatement",
-          "ruleId": "no-unused-expressions",
           "severity": 2,
         },
         Object {
@@ -875,9 +866,9 @@ Object {
           "fix": Object {
             "range": Array [
               1239,
-              1270,
+              1254,
             ],
-            "text": "(atom) => { return atom; }",
+            "text": "(atom) => ",
           },
           "line": 59,
           "message": "Unexpected function expression.",
@@ -899,6 +890,8 @@ Object {
         },
         Object {
           "column": 1,
+          "endColumn": 107,
+          "endLine": 61,
           "line": 61,
           "message": "This line has a comment length of 106. Maximum allowed is 100.",
           "messageId": "maxComment",
@@ -922,7 +915,7 @@ import fuzzy from 'foo';",
           "message": "Run autofix to sort these imports!",
           "messageId": "sort",
           "nodeType": null,
-          "ruleId": "simple-import-sort/sort",
+          "ruleId": "simple-import-sort/imports",
           "severity": 2,
         },
         Object {
@@ -1040,16 +1033,6 @@ funk(function(atom) { return atom; });",
           "message": "Import in body of module; reorder to top.",
           "nodeType": "ImportDeclaration",
           "ruleId": "import/first",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 30,
-          "endLine": 63,
-          "line": 63,
-          "message": "Expected 'multiple' syntax before 'single' syntax.",
-          "nodeType": "ImportDeclaration",
-          "ruleId": "sort-imports-es6/sort-imports-es6",
           "severity": 2,
         },
         Object {

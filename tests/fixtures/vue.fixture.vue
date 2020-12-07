@@ -10,21 +10,7 @@
     <button v-on:click="onClick">Button</button>
   </div>
 </template>
+
 <script>
-export default {
-  name: 'App',
-  data: {
-    name: 'World',
-    items: [
-      {id: 1, name: "a"},
-      {id: 2, name: "b"},
-      {id: 3, name: "c"}
-    ]
-  },
-  methods: {
-    onClick() {
-      // do something.
-    }
-  }
-}
+export { Component as default } from './vue.fixture';
 </script>
