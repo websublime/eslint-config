@@ -13,6 +13,7 @@ const plugins = [
   "new-with-error",
   "react-hooks",
   "react",
+  "simple-import-sort",
   "sort-class-members",
   "sort-destructure-keys",
   "switch-case",
